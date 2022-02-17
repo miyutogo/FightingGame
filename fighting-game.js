@@ -21,7 +21,7 @@ function Fighter(hero) {
           },
           dealDamage(opp) {
               opp.takeDamage(attack);
-              console.log(`${name} attacked ${opp.getName()}! Total damage given: ${attack}! ${opp.getName()}'s life is now ${opp.getHp()}`);
+              console.log(`${name} attacked ${opp.getName()}! Total damage given: ${attack}! ${opp.getName()}'s hp is now ${opp.getHp()}`);
   
           },
       }
@@ -29,6 +29,7 @@ function Fighter(hero) {
   
   
   function Fight(player1,player2){
+      console.log(`Let's welcome our players! ${player1.getName()} with ${player1.getHp()} life and ${player2.getName()} with ${player2.getHp()} life`)
       while (player1.getHp() > 0 && player2.getHp() > 0) {
           player1.dealDamage(player2);
           if (player2.getHp() > 0) {
